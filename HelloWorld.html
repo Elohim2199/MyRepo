@@ -1,1 +1,32 @@
 
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script>
+        function myFunction() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                window.alert("Name should be filled");
+                return false;
+            }
+        }
+        function myFunction2() {
+            var x = document.getElementsByName("fnumb").value;
+            if (isNaN(x) || x < 1 || x > 10) {
+                alert("Invalid");
+            } 
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm" onclick="myFunction()" onsubmit="return myFunction2()">
+        Name:<input type="text" name="fname"> 
+        <input type="button" value="Submit">
+        <br><br>
+        Number<input type="text" name="fnumb">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
